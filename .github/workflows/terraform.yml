@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Terraform with specified version on the runner
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         # Uncomment to specify a Terraform version
         # with:
         #   terraform_version: '1.1.9'
@@ -51,7 +51,7 @@ jobs:
         
       - name: Terraform validate
         id: validate
-        run: terraform validate
+        run: terraform validate -no-color
       
       - name: Terraform plan
         id: plan
