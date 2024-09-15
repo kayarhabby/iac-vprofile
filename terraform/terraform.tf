@@ -27,12 +27,12 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "gitopsvprofileactions"
+    bucket = "gitopsterrastate"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
 
-  # required_version = "~> 1.6.3"
+  required_version = "~> 1.5.1"
 }
 ##
 ##
